@@ -49,7 +49,7 @@ contract Test01 {
 
     // Đăng ký tài khoản cho người dùng (Farmer, Distributor, Retailer, Consumer)
     function registerUser(string memory _userName, string memory _role) public {
-        require(!users[msg.sender].isRegistered, "User already registered.");
+        require(!users[msg.sender].isRegistered, "User already registered."); 
         require(
             keccak256(abi.encodePacked(_role)) == keccak256("farmer") ||
             keccak256(abi.encodePacked(_role)) == keccak256("distributor") ||
